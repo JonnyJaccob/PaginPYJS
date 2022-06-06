@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Flask Web App</title>
-    <!-- BOOTSTRAP 4 CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>UT</title>
+    
+    <style type="text/css">
+		/*Formato*/	
+        * {
+            margin:0px;
+            padding:0px;
+        }
+        /*Posicion*/
+        #header {
+            margin:0px;
+            width:1000px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        /*Relleno general del div*/
+        ul, ol {
+            list-style:none;
+        }
+        /*Forma menu*/
+        .nav > li {
+            float:left;
+        }
+        /*Orden del menu*/
+        .nav li a {
+            background-color:#1cb494;
+            color:#fff;
+            text-decoration:none;
+            padding:20px 50px 20px;
+            display:block;
+            float:left;
+        }
+        /*Al pasar el mouse*/
+        .nav li a:hover {
+            background-color:#105e4d;
+        }
+        /*Formato de submenus1*/
+        .nav li ul {
+            display:none;
+            position:absolute;
+            min-width:140px;
+        }
+        /*Al pasar el mouse aparecen los submenus1*/
+        .nav li:hover > ul {
+            display:block;
+        }
+        /*Posicion de los submenus2 a lado*/
+        .nav li ul li {
+            position:relative;
+        }
+        /*Especifica la posicion del submenu2*/
+        .nav li ul li ul {
+            right:-140px;
+            top:0px;
+        }
+        
+    </style>
   </head>
   <body>
 
@@ -26,14 +76,72 @@
         </ul>
       </div>
     </nav>
-  
 
+    <div id="header">
+        <ul class="nav">
+            <li><a href="">UT NUEVO LAREDO</a>
+                <ul>
+                    <li><a href="">Mensaje de bienvenida</a></li>
+                    <li><a href="">Historia</a></li>
+                    <li><a href="">Mision/vision</a></li>
+                    <li><a href="">Política/Objetivos de Calidad</a></li>
+                    <li><a href="">Modelo Educativo</a></li>
+                    <li><a href="">Directorio</a></li>
+                    <li><a href="">Consejo Directivo </a></li>
+                    <li><a href="">Infraestructura</a></li>
+                    <li><a href="">Normatividad</a></li>
+                    <li><a href="">Carreras Acreditádas</a></li>
+                </ul>
+            </li>
+            <li><a href="">CARRERA</a>
+                <ul>
+                    <li><a href="">TECNICO SUPERIOR UNIVRSITARIO</a>
+                        <ul>
+                            <li><a href="">Desarrollo de Negocios Área Mercadotecnia</a></li>
+                            <li><a href="">Logística Área Cadena de Suministros BIS</a></li>
+                            <li><a href="">Logística Área Cadena de Suministros</a></li>
+                            <li><a href="">Logística Área Transporte Terrestre</a></li>
+                            <li><a href="">Operaciones Comerciales Internacionales Área CADA</a></li>
+                            <li><a href="">Mecatrónica Área Automatización BIS</a></li>
+                            <li><a href="">Mecatrónica Área Automatización</a></li>
+                            <li><a href="">Mantenimiento Área Instalaciones</a></li>
+                            <li><a href="">Mantenimiento Área Maquinaria Pesada</a></li>
+                            <li><a href="">Energías Renovables Área Energía Solar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">INGENIERIA Y LICENCIATURAS</a>
+                        <ul>
+                            <li><a href="">Licenciatura en Innovación de Negocios y Mercadotecnia</a></li>
+                            <li><a href="">Ingeniería en Logística Internacional</a></li>
+                            <li><a href="">Licenciatura en Diseño y Gestión de Redes Logísticas</a></li>
+                            <li><a href="">Ingeniería en Mecatrónica</a></li>
+                            <li><a href="">Ingeniería en Mantenimiento Industrial</a></li>
+                            <li><a href="">Ingeniería en Energías Renovables</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><img src="..\source\Utbis2018.jpg" alt="UT IMAGE" width="15px"></li>
+            <li><a href="">CORREO</a></li>
+            <li><a href="">SISTEMAS UT</a>
+                <ul>
+                    <li><a href="">SAE</a></li>
+                    <li><a href="">SAIIUT</a></li>
+                    <li><a href="">Classrom</a></li>
+                    <li><a href="">Clases Virtuales</a></li>
+                    <li><a href="">Buzón de Quejas, Sugerencias y Necesidades</a></li>
+                    <li><a href="">Sistema Evaluación de Servicios</a></li>
+                    <li><a href="">SGC</a></li>
+                    <li><a href="">Información Financiera</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
     <div class="container p-4">
       {% block content %}
       {% endblock%}
     </div>
 
-    <!-- SCRIPTS -->
-    <script src="{{url_for('static', filename='js/main.js')}}"></script>
-  </body>
+    
 </html>
