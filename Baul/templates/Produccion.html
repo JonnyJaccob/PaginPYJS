@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UT</title>
+    
+    <style type="text/css">
+		/*Formato*/	
+        * {
+            margin:0px;
+            padding:0px;
+        }
+        /*Posicion*/
+        #header {
+            margin:0px;
+            width:1000px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        /*Relleno general del div*/
+        ul, ol {
+            list-style:none;
+        }
+        /*Forma menu*/
+        .nav > li {
+            float:left;
+        }
+        /*Orden del menu*/
+        .nav li a {
+            background-color:#1cb494;
+            color:#fff;
+            text-decoration:none;
+            padding:20px 50px 20px;
+            display:block;
+            float:left;
+        }
+        /*Al pasar el mouse*/
+        .nav li a:hover {
+            background-color:#105e4d;
+        }
+        /*Formato de submenus1*/
+        .nav li ul {
+            display:none;
+            position:absolute;
+            min-width:140px;
+        }
+        /*Al pasar el mouse aparecen los submenus1*/
+        .nav li:hover > ul {
+            display:block;
+        }
+        /*Posicion de los submenus2 a lado*/
+        .nav li ul li {
+            position:relative;
+        }
+        /*Especifica la posicion del submenu2*/
+        .nav li ul li ul {
+            right:-140px;
+            top:0px;
+        }
+        
+        #menu li>a{
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            min-width: 100px;
+        }
+        #menu li>a:hover{
+            color: #000;
+            background-color: #eaeaea;
+        }
+        #menu>li{
+            float: left;
+            text-align:center
+        }
+        #menu>li>ul{
+            display: none;
+        }
+        #menu>li:hover>ul {
+            display:block;
+        }
+        /*Color de las letras iniciales*/
+        #Encab{
+            color: green;
+        }
+        .logo{
+                display: flex;
+                align-items: center;
+            }
+            .logo img{
+                height: 50px;
+            }
+            nav a{
+                font-weight: 600;
+                padding-right: 10px;
+            }
+            nav a:hover{
+                color:white;
+            }
+            @media (max-width: 700px){
+                header{
+                    flex-direction: column;
+                }
+                nav{
+                    padding: 10px 0px;
+                }
+            }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <h1 id="Encab">UNIVERSIDAD TECNOLOGICA DE NUEVO LAREDO</h1>
+    </nav>
+
+    <header>
+        <a href="#" class="logo">
+            <img src="logo.png" alt="logo">
+            <h2 class="logo-nombre">Nombre compañia</h2>
+        </a>
+        <nav>
+            <a href="" class="nav-link">Inicio</a>
+            <a href="" class="nav-link">Sobre</a>
+            <a href="" class="nav-link">Contacto</a>
+        </nav>
+    </header>
+
+    <header>
+        <nav>
+          <ul id="menu">
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Cursos</a>
+              <ul>
+                <li><a href="">Frontend</a></li>
+                <li><a href="">Backend</a></li>
+                <li><a href="">Mobile</a></li>
+              </ul>  
+            </li>
+            <li><a href="">Tutoriales</a></li>
+            <li><a href="">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    
+
+    
+</html>
