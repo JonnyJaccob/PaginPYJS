@@ -82,12 +82,50 @@
         #Encab{
             color: green;
         }
+        .slider {
+	        width: 95%;
+	        margin: auto;
+	        overflow: hidden;
+        }
+
+        .slider ul {
+	        display: flex;
+	        padding: 0;
+	        width: 400%;
+          
+          animation: cambio 20s infinite alternate linear;
+        }
+
+        .slider li {
+          width: 100%;
+          list-style: none;
+        }
+
+        .slider img {
+          width: 100%;
+        }
+
+        @keyframes cambio {
+          0% {margin-left: 0;}
+          20% {margin-left: 0;}
+          
+          25% {margin-left: -100%;}
+          45% {margin-left: -100%;}
+          
+          50% {margin-left: -200%;}
+          70% {margin-left: -200%;}
+          
+          75% {margin-left: -300%;}
+          100% {margin-left: -300%;}
+        }
     </style>
   </head>
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <h1 id="Encab">UNIVERSIDAD TECNOLOGICA DE NUEVO LAREDO</h1>
+      <a href="iniciar.html">Iniciar sesion</a>
+      <a href="registrar.html">Registrarse</a>
     </nav>
 
     <div id="header">
@@ -176,9 +214,19 @@
         
       </div>
       
+      <div class="slider">
+        <ul>
+          <li>
+            <img src="C:\Users\jacco\Documents\Repos\PaginPYJS\Baul\source\utmain1.png" alt="UT1">
+          </li>
+          <li>
+            <img src="C:\Users\jacco\Documents\Repos\PaginPYJS\Baul\source\utmain2.png" alt="UT2">
+          </li>
+        </ul>
+      </div>
+
       <div>
-          <img src="C:\Users\jacco\Documents\Repos\PaginPYJS\Baul\source\utmain1.png"></img>
-          <img src="C:\Users\jacco\Documents\Repos\PaginPYJS\Baul\source\utmain2.png"></img>
+          
           <a href="Produccion.html" >Produccion</a>
       </div>
     </div>

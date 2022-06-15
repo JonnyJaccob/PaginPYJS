@@ -14,7 +14,7 @@ def about_test():
 # Routes to Render Something
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return render_template("home1.html")
 
 @app.route('/about', strict_slashes=False)
 def about():
