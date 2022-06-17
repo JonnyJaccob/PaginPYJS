@@ -19,7 +19,10 @@ python index.py
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     
 ## Imagenes  
-<img src="Images\imx.png">   
+<img src="Images\imx.png">  
+
+### Home1
+<img src="Images\home1.png">
 
 ## Recordatorios html  
 https://www.iebschool.com/blog/que-es-etiqueta-html-analitica-usabilidad/  
