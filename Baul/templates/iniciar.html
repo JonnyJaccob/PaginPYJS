@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <META http-equiv="Content-Script-Type" content="text/javascript">
-            <link rel="stylesheet" href="../static/style1.css">
-    </head>
-    <body>
-        <section>
-            <LABEL for="nombre">Nombre: </LABEL>
-            <p><input type="text" name="nombres"  placeholder="Ingrese sus nombres" id=""></p>
-            <p><input type="text" name="apellido" placeholder="Ingrese su apellido" id=""></p>
-            <p><input type="text" name="correo" placeholder="Ingrese su correo" id=""></p>
-            <p>
-                <INPUT type="radio" name="sexo" value="Hombre">Hombre<BR>
-                <INPUT type="radio" name="sexo" value="Mujer"> Mujer<BR>
-            </p>
-            <p><input type="text" name="contraseña" placeholder="Ingrese su contraseña" id=""></p>
-            <p><input type="text" name="password" placeholder="Ingrese nuevamente su contraseña" id="">
-            <p><button onclick="location.href='home1.html'">Regresar</button></p>
-        </section>
-
-        <section class="form-register">
-            <h4>Formulario Registro</h4>
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-            <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
-            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            <input class="botons" type="submit" value="Registrar">
-            <p><a href="#">¿Ya tengo Cuenta?</a></p>
-        </section>
-    </body>
-</html>
+<form action = "/usuario.html" method = "post">
+    <section>
+        <LABEL>INICIAR SESION</LABEL>
+        <p><LABEL for="Correlabel:">Correo: </LABEL></p>
+               
+        <p><input type="text" name="nombreUserr" placeholder="Ingrese su correo o num. de control" id="id_correo" size="30" maxlenght="50"></p>
+        <LABEL for="Correo:">Contraseña: </LABEL>
+        <p><input type="Contraseña" name="contra"  placeholder="Contraseña" id="id_contra" size="30" maxlenght="30"></p>
+        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+        <input type="submit" value="Enviar" />
+        <p><a href="registrar.html">¿No tienes cuenta?</a></p>
+        <h1>{{Prueba}}</h1>
+    
+                
+    </section>
+    <label >Ingresa un dato</label>
+    <input type="text" name="nombreUser"><br/>
+        
+    <input type="submit" value="Enviar" />
+</form>

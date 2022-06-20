@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.correo{
+    width: max-content;
+    color:red;
+}

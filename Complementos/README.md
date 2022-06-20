@@ -11,3 +11,6 @@ Ejemplo de conexion de pyhton a html y javascript para pasar variables.
 
 ## PasoPP
 Ejemplo para pasar una variable de python a otro.  
+
+## Paso JsPyJSON
+Ejemplo de pasar una variable js a python.
