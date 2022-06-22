@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <META http-equiv="Content-Script-Type" content="text/javascript">
+            <link rel="stylesheet" href="../static/style1.css">
+    </head>
+    <body>
+        <section>
+            <LABEL>INICIAR SESION</LABEL>
+            <p><LABEL for="Correlabel:">Correo: </LABEL></p>
+                
+            <form action="{{ url_for("usuario")}}" method="post">
+            <p><input type="text" name="nombreUser" placeholder="Ingrese su correo o num. de control" id="nombreUser" size="30" maxlenght="50"></p>
+            <LABEL for="Correo:">Contraseña: </LABEL>
+            <p><input type="Contraseña" name="contra"  placeholder="Contraseña" id="id_contra" size="30" maxlenght="30"></p>
+            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            
+                <input type="submit" value="Enviar" />
+            </form>
+            <button onclick="location.href=/usuario.html">Llévame a otro lado</button>
+            <p><a href="registrar.html">¿No tienes cuenta?</a></p>
+        </section>
+
+    </body>
+</html>

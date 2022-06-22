@@ -1,5 +1,12 @@
-import ConUser as CU
+from ConUser import * 
 
-x = CU.Operacion("22LM003","22LM003")
 
-x.InicioSesion()
+x = Operacion()
+
+
+
+#x.InicioSesion("22LM003","22LM003")
+
+#x.ExisteCorreo("ut22LM003@nlaredo.mx","22LM003")
+
+x.ExisteNum("22LM003","22LM003")
