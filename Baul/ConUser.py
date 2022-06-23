@@ -3,7 +3,7 @@ from bd import conexion
 
 class Operacion:
     
-    cursor = conexion.cursor()
+    
     Contra = ""
     NumControl = ""
     Correo = ""
@@ -49,9 +49,7 @@ class Operacion:
                 
         except Exception as e:
             print("Ocurrió un error al consultar: ", e)
-        finally:
-            cursor.close()
-            conexion.close()
+        
             
     
     def InicioSesionCorreo(cls,correo,cont):
@@ -83,8 +81,7 @@ class Operacion:
                 
         except Exception as e:
             print("Ocurrió un error al consultar: ", e)
-        finally:
-            conexion.close()
+        
     
     def ExisteCorreo(cls,correo,cont):
         try:
@@ -95,24 +92,31 @@ class Operacion:
                 for pelicula in peliculas:
                     list1 = list(pelicula)
                     print(list1[0])
+                    if (list1[0] == 'si'):
+                        return 'si'
+                    else:
+                        return 'no'
                     
         except Exception as e:
             print("Ocurrió un error al consultar: ", e)
-        finally:
-            conexion.close()
+       
             
     def ExisteNum(cls,Num,cont):
-        cursor = conexion.cursor()
+        
         try:
-            cursor.execute(f"select case when exists(select ID_Alumno from cuenta where ID_Alumno = '{Num}' and Contraseña = '{cont}') then 'si' else 'no' end as Existe")
-            peliculas = cursor.fetchall()
-            for pelicula in peliculas:
-                list1 = list(pelicula)
-                print(list1[0])
+            with conexion.cursor() as cursor:
+                cursor.execute(f"select case when exists(select ID_Alumno from cuenta where ID_Alumno = '{Num}' and Contraseña = '{cont}') then 'si' else 'no' end as Existe")
+                peliculas = cursor.fetchall()
+                for pelicula in peliculas:
+                    list1 = list(pelicula)
+                    print(list1[0])
+                    if (list1[0] == 'si'):
+                        return 'si'
+                    else:
+                        return 'no'
         except Exception as e:
             print("Ocurrió un error al consultar: ", e)
-        finally:
-            cursor.close()
+        #finally:
             #conexion.close() #al parecer esto provoco el error
             
     def __exit__(self, *args):
