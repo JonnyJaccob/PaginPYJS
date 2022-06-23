@@ -3,7 +3,7 @@ from bd import conexion
 
 class Operacion:
     
-    
+    cursor = conexion.cursor()
     Contra = ""
     NumControl = ""
     Correo = ""
@@ -50,7 +50,9 @@ class Operacion:
         except Exception as e:
             print("Ocurrió un error al consultar: ", e)
         finally:
+            cursor.close()
             conexion.close()
+            
     
     def InicioSesionCorreo(cls,correo,cont):
         try:
@@ -100,16 +102,19 @@ class Operacion:
             conexion.close()
             
     def ExisteNum(cls,Num,cont):
+        cursor = conexion.cursor()
         try:
-            with conexion.cursor() as cursor:
-                # En este caso no necesitamos limpiar ningún dato
-                cursor.execute(f"select case when exists(select ID_Alumno from cuenta where ID_Alumno = '{Num}' and Contraseña = '{cont}') then 'si' else 'no' end as Existe")
-                peliculas = cursor.fetchall()
-                for pelicula in peliculas:
-                    list1 = list(pelicula)
-                    print(list1[0])
-                    
+            cursor.execute(f"select case when exists(select ID_Alumno from cuenta where ID_Alumno = '{Num}' and Contraseña = '{cont}') then 'si' else 'no' end as Existe")
+            peliculas = cursor.fetchall()
+            for pelicula in peliculas:
+                list1 = list(pelicula)
+                print(list1[0])
         except Exception as e:
             print("Ocurrió un error al consultar: ", e)
         finally:
-            conexion.close()
+            cursor.close()
+            #conexion.close() #al parecer esto provoco el error
+            
+    def __exit__(self, *args):
+        self._cursor.close()
+        self._connection.close()

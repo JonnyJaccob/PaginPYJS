@@ -9,17 +9,22 @@
             <LABEL>INICIAR SESION</LABEL>
             <p><LABEL for="Correlabel:">Correo: </LABEL></p>
                 
-            <form action="{{ url_for("usuario")}}" method="post">
-            <p><input type="text" name="nombreUser" placeholder="Ingrese su correo o num. de control" id="nombreUser" size="30" maxlenght="50"></p>
-            <LABEL for="Correo:">Contraseña: </LABEL>
-            <p><input type="Contraseña" name="contra"  placeholder="Contraseña" id="id_contra" size="30" maxlenght="30"></p>
-            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            
-                <input type="submit" value="Enviar" />
+            <form  method="post">
+                <p><input type="text" name="nombreUser" placeholder="Ingrese su correo o num. de control" id="nombreUser" size="30" maxlenght="50"></p>
+                <LABEL for="Correo:">Contraseña: </LABEL>
+                <p><input type="Contraseña" name="contra"  placeholder="Contraseña" id="id_contra" size="30" maxlenght="30"></p>
+                <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+                
+                    <input type="submit" value="Enviar" />
             </form>
-            <button onclick="location.href=/usuario.html">Llévame a otro lado</button>
+            <button onclick="location.href=/usuario">Llévame a otro lado</button>
             <p><a href="registrar.html">¿No tienes cuenta?</a></p>
         </section>
+
+        <form action="{{ url_for("get_freq")}}" method="post">
+            <label for="set_freq">Set Frequency:</label>
+            <input type="number" id="set_freq" name="set_freq" >
+            <button type="submit">submit</button> 
 
     </body>
 </html>
