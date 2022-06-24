@@ -86,7 +86,7 @@ def usuario():
 # which URL is associated function
 # A decorator used to tell the application
 # which URL is associated function
-@app.route('/iniciar1.html', methods =["GET", "POST"])
+@app.route('/iniciar2.html', methods =["GET", "POST"])
 def gfg():
     if request.method == "POST":
         nombreUser = request.form['nombreUser']
@@ -96,7 +96,8 @@ def gfg():
             if usuario.ExisteNum(nombreUser,contra) == 'si':
                 usuario.InicioSesion(nombreUser,contra)
                 print("x")
-                return render_template("usuario.html", usr=usuario.NumControl, contra = usuario.Contra)
+                listaUsr = {usuario.NumControl, usuario.Nombre}
+                return render_template("usuario.html", usr=usuario.NumControl, listaUsr = listaUsr)
             elif usuario.ExisteCorreo(nombreUser,contra) == 'si':
                 usuario.InicioSesionCorreo(nombreUser,contra)
                 print("z")

@@ -1,6 +1,33 @@
-<form action="{{ url_for('gfg')}}" method="post">
-    <label for="firstname">First Name:</label>
-    <input type="text" id="firstname" name="nombreUser" placeholder="firstname">
-    <label for="lastname">Last Name:</label>
-    <input type="text" id="lastname" name="contra" placeholder="lastname">
-    <button type="submit">Login</button>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="{{ url_for('gfg')}}" method="post">
+            <section>
+                <LABEL>INICIAR SESION</LABEL>
+                <p><LABEL for="Correlabel:">Correo: </LABEL></p>
+                       
+                <p><input type="text" name="nombreUser" placeholder="Ingrese su correo o num. de control" id="id_correo" size="30" maxlenght="50"></p>
+                <LABEL for="Correo:">Contraseña: </LABEL>
+                <p><input type="Contraseña" name="contra"  placeholder="Contraseña" id="id_contra" size="30" maxlenght="30"></p>
+                <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+                <input type="submit" value="Enviar" />
+                <p><a href="registrar.html">¿No tienes cuenta?</a></p>
+                
+            </section>
+        </form>
+        <p><button onclick="location.href='home1.html'">Regresar</button></p>
+        <input type="submit" value="?" name="Llenar" onclick="cambiarValor()"/>
+
+        <script type="text/javascript">
+            //var Myelement = document.querySelector('input[name="Llenar"]');
+            function cambiarValor()
+            {
+                document.getElementById("id_correo").value= "ut22LM003@nlaredo.mx";
+                document.getElementById("id_contra").value= "22LM003";
+            }
+            
+        </script>
+    </body>
+</html>
