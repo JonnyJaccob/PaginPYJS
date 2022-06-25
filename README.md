@@ -24,5 +24,11 @@ python index.py
 ### Home1
 <img src="Images\home1.png">
 
+### Inicio sesion
+<img src="Images\Inicio.png">  
+
+### Registro
+<img src="Images\Registro.png">
+
 ## Recordatorios html  
 https://www.iebschool.com/blog/que-es-etiqueta-html-analitica-usabilidad/  
