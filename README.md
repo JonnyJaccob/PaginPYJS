@@ -30,5 +30,8 @@ python index.py
 ### Registro
 <img src="Images\Registro.png">
 
+### Usuario
+<img src="Images\Usuario.png">
+
 ## Recordatorios html  
 https://www.iebschool.com/blog/que-es-etiqueta-html-analitica-usabilidad/  

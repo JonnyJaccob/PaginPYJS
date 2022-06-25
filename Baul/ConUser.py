@@ -38,13 +38,14 @@ class Operacion:
                     print(pelicula)
                     cls.NumControl = list1[0]
                     cls.Correo = list1[1]
-                    cls.Nombre = list1[2]
-                    cls.ApellidoP = list1[3]
-                    cls.ApellidoM = list1[4]
-                    cls.FechaN = list1[5]
-                    cls.FechaIng = list1[6]
-                    cls.Carrera = list1[7]
-                    cls.Semestre  = list1[8]
+                    cls.Nombre = list1[3]
+                    cls.ApellidoP = list1[4]
+                    cls.ApellidoM = list1[5]
+                    cls.FechaN = list1[6]
+                    cls.FechaIng = list1[7]
+                    cls.Carrera = list1[8]
+                    cls.Semestre  = list1[9]
+                print(f"Numero control: {cls.NumControl} Correo: {cls.Correo} Nombre: {cls.Nombre} Apellido paterno: {cls.ApellidoP} Apellido Materno: {cls.ApellidoM} Fecha Nacimiento: {cls.FechaN} Fecha ingreso: {cls.FechaIng} Carrera: {cls.Carrera} Semestre: {cls.Semestre}°")
                     
                 
         except Exception as e:
@@ -70,13 +71,14 @@ class Operacion:
                     print(pelicula)
                     cls.NumControl = list1[0]
                     cls.Correo = list1[1]
-                    cls.Nombre = list1[2]
-                    cls.ApellidoP = list1[3]
-                    cls.ApellidoM = list1[4]
-                    cls.FechaN = list1[5]
-                    cls.FechaIng = list1[6]
-                    cls.Carrera = list1[7]
-                    cls.Semestre  = list1[8]
+                    cls.Nombre = list1[3]
+                    cls.ApellidoP = list1[4]
+                    cls.ApellidoM = list1[5]
+                    cls.FechaN = list1[6]
+                    cls.FechaIng = list1[7]
+                    cls.Carrera = list1[8]
+                    cls.Semestre  = list1[9]
+                print(f"Numero control: {cls.NumControl} Correo: {cls.Correo} Nombre: {cls.Nombre} Apellido paterno: {cls.ApellidoP} Apellido Materno: {cls.ApellidoM} Fecha Nacimiento: {cls.FechaN} Fecha ingreso: {cls.FechaIng} Carrera: {cls.Carrera} Semestre: {cls.Semestre}°")
                     
                 
         except Exception as e:
