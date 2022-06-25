@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import json
 import pyodbc
+from Insercion import *
 from ConUser import *
 import VacioAndNull as CNULL
 
@@ -84,8 +85,6 @@ def usuario():
 
 # A decorator used to tell the application
 # which URL is associated function
-# A decorator used to tell the application
-# which URL is associated function
 @app.route('/iniciar2.html', methods =["GET", "POST"])
 def gfg():
     if request.method == "POST":
@@ -96,17 +95,38 @@ def gfg():
             if usuario.ExisteNum(nombreUser,contra) == 'si':
                 usuario.InicioSesion(nombreUser,contra)
                 print("x")
-                listaUsr = {usuario.NumControl, usuario.Nombre}
-                return render_template("usuario.html", usr=usuario.NumControl, listaUsr = listaUsr)
+                #listaUsr = {usuario.NumControl, usuario.Nombre}
+                return render_template("usuario.html",rate = "Num" ,usr=usuario.NumControl, Correo = usuario.Correo, Nombre = usuario.Nombre, ApellidoP = usuario.ApellidoP, ApellidoM = usuario.ApellidoM, Semestre = usuario.Semestre, Carrera = usuario.Carrera)
             elif usuario.ExisteCorreo(nombreUser,contra) == 'si':
                 usuario.InicioSesionCorreo(nombreUser,contra)
                 print("z")
-                return render_template("usuario.html", usr=usuario.NumControl, contra = usuario.Contra)
+                listaUsr = {usuario.NumControl, usuario.Correo, usuario.Nombre, usuario.ApellidoP, usuario.ApellidoM, usuario.Semestre, usuario.Carrera}
+                return render_template("usuario.html",rate = "Correo" ,usr=usuario.NumControl, Correo = usuario.Correo, Nombre = usuario.Nombre, ApellidoP = usuario.ApellidoP, ApellidoM = usuario.ApellidoM, Semestre = usuario.Semestre, Carrera = usuario.Carrera, listaUsr = listaUsr)
             else:
                 return "Error: No se encontro el usuario/datos incorrectos "
         else:
             return "Debes llenar los campos"
     return render_template("iniciar2.html")
+
+@app.route('/registro', methods =["GET", "POST"])
+def registro():
+    if request.method == "POST":
+        nombre = request.form['nombres']
+        apellidop = request.form['apellidoP']
+        apellidom = request.form['apellidoM']
+        #correo = request.form['correo']
+        sexoH = request.form.get("sexo", False)
+        #sexoM = request.form['sexoM']
+        FechaNac = request.form['FNac']
+        FechaIng = request.form['FIng']
+        #contra = request.form['contraseña']
+        #ccontra = request.form['password']
+        carrera = request.form['carrera']
+        if CNULL.VAN(nombre) and  CNULL.VAN(apellidop) and  CNULL.VAN(apellidom)  and  CNULL.VAN(sexoH) and CNULL.VAN(FechaNac) and  CNULL.VAN(FechaIng) and  CNULL.VAN(carrera):
+            Insertar(nombre, apellidop, apellidom, sexoH, FechaNac, FechaIng, carrera)
+        else:
+            return "Llena todos los cambios requeridos"
+    return render_template('iniciar2.html')
 
 
 # Make sure this we are executing this file

@@ -1,9 +1,14 @@
 <html>
     <head>
+        <style type="text/css">
+            var letters = {{ listaUsr|safe }}
+            
+        </style>
     </head>
     <body>
+        <h1>{{rate}} </h1>
         <h1>Bienvenido:  {{usr}}</h1> 
-        <h1>{{listaUsr[0]}}</h1>
+        {{letters}}
         <h1>Bienvenido </h1>
     </body>
 </html>

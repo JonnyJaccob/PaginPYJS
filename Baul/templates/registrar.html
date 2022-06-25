@@ -6,20 +6,53 @@
         
     </head>
     <body>
-        <section>
-            <LABEL for="nombre">Nombre: </LABEL>
-            <p><input type="text" name="nombres"  placeholder="Ingrese sus nombres" id=""></p>
-            <p><input type="text" name="apellido" placeholder="Ingrese su apellido" id=""></p>
-            <p><input type="text" name="correo" placeholder="Ingrese su correo" id=""></p>
-            <p>
-                <INPUT type="radio" name="sexo" value="Hombre">Hombre<BR>
-                <INPUT type="radio" name="sexo" value="Mujer"> Mujer<BR>
-            </p>
-            <p><input type="text" name="contraseña" placeholder="Ingrese su contraseña" id=""></p>
-            <p><input type="text" name="password" placeholder="Ingrese nuevamente su contraseña" id="">
-            <p><button onclick="location.href='home1.html'">Regresar</button></p>
-        </section>
-        
+        <form action="{{ url_for('registro')}}" method="post">
+            <section>
+                <LABEL for="nombre">Nombre: </LABEL>
+                <p><input type="text" name="nombres"  placeholder="Ingrese sus nombres" id="src1" size="30"></p>
+                <LABEL>Apellido paterno: </LABEL>
+                <p><input type="text" name="apellidoP" placeholder="Ingrese su apellido paterno" id="src2" size="30"></p>
+                <LABEL>Apellido materno: </LABEL>
+                <p><input type="text" name="apellidoM" placeholder="Ingrese su apellido materno" id="src3" size="30"></p>
+                <LABEL>Correo: </LABEL>
+                <p><input type="text" name="correo" placeholder="Ingrese su correo" id="src4" size="30"></p>
+                <p>Genero:<br>
+                    <input type="radio" name="sexo" value="Hombre" id="src5"> Hombre<br>
+                    <input type="radio" name="sexo" value="Mujer"> Mujer
+                </p>
+                <LABEL>Fecha de nacimiento: </LABEL>
+                <p><input type="date" name="FNac" id="scr6" value= "2000-01-01"></p>
+                <LABEL>Fecha de ingreso: </LABEL>
+                <p><input type="date" name="FIng" id="src7" value= "2021-01-01"></p>
+                <LABEL>Contraseña: </LABEL>
+                <p><input type="text" name="contraseña" placeholder="Ingrese su contraseña" id="src8" size="30"></p>
+                <p><input type="text" name="password" placeholder="Ingrese nuevamente su contraseña" id="src9" size="30"><br>
+                <LABEL>Carrera: </LABEL>
+                    <select name="carrera">
+                        <option value="Electrica" select>Electrica</option>
+                        <option value="Mecanica" >Mecanica</option>
+                        <option value="Contabilidad">Contabilidad</option>
+                    </select>
+            </section>
+            <p><button onclick="location.href='registro'">Registrar</button></p>
+        </form>
+        <p><button onclick="location.href='home1.html'">Regresar</button></p>
+        <input type="submit" value="  ?  " name="Llenar" onclick="cambiarValor()"/>
+        <script type="text/javascript">
+            function cambiarValor()
+            {
+                document.getElementById("src1").value= "Martin";//nombre
+                document.getElementById("src2").value= "Lopez";//paterno
+                document.getElementById("src3").value= "Aguilar";//materno
+                document.getElementById("src4").value= "";//correo
+                document.querySelector('#src5').checked = true;//radio
+                document.getElementById("src6").value= "2000-01-01";//date nac
+                document.getElementById("src7").value= "";//date ing
+                document.getElementById("src8").value= "";//contra
+                document.getElementById("src9").value= "";//contrac
+            }
+            
+        </script>
         <section class="form-register">
             <h4>Formulario Registro</h4>
             <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
@@ -28,7 +61,7 @@
             <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             <input class="botons" type="submit" value="Registrar">
-            <p><a href="#">¿Ya tengo Cuenta?</a></p>
+            <p><a href="location.href='iniciar2.html'">¿Ya tengo Cuenta?</a></p>
         </section>
     </body>
 </html>

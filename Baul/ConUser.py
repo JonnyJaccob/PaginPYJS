@@ -122,3 +122,5 @@ class Operacion:
     def __exit__(self, *args):
         self._cursor.close()
         self._connection.close()
+        
+    
